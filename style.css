@@ -1,0 +1,107 @@
+:root {
+  --pink: #FF69B4;
+  --champagne: #F7E7CE;
+  --gold: #FFD700;
+  --emerald: #50C878;
+  --black: #000000;
+  --dark-text: #1b1b1b; /* deep gray for readability */
+}
+
+/* === Base Styling === */
+body {
+  background-color: var(--black);
+  color: var(--dark-text); /* default text is dark gray */
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Banner === */
+.store-banner {
+  background-color: var(--black);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.store-banner-img {
+  width: 100%;
+  height: auto;
+  border-bottom: 4px solid var(--gold);
+}
+.store-banner-overlay {
+  background: rgba(0,0,0,0.5);
+  color: var(--gold);
+  padding: 1rem;
+}
+
+/* === Headings & Text === */
+h1, h2, h3, .section-title {
+  color: var(--pink);
+  font-weight: bold;
+}
+.lead {
+  color: var(--emerald);
+  font-style: italic;
+}
+
+/* === Buttons === */
+.btn-svp-primary {
+  background-color: var(--pink);
+  color: var(--black);
+  border: 2px solid var(--gold);
+}
+.btn-svp-primary:hover {
+  background-color: var(--gold);
+  color: var(--black);
+}
+
+/* === Specs List === */
+.kf-specs li {
+  color: var(--dark-text);
+}
+.kf-specs strong {
+  color: var(--emerald);
+}
+
+/* === Gallery === */
+.gallery-item {
+  background-color: var(--black);
+  border: 2px solid var(--champagne);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+}
+.gallery-caption {
+  background-color: var(--champagne);
+  color: var(--dark-text); /* dark text inside captions */
+  border-top: 2px solid var(--gold);
+}
+.caption-title {
+  color: var(--pink);
+}
+.caption-sub {
+  color: var(--dark-text);
+}
+
+/* === Images === */
+.gallery-img {
+  border: 3px solid var(--emerald);
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  .btn-svp-primary { font-size: 0.9rem; }
+  .gallery-caption { font-size: 0.9rem; }
+}
+@media (max-width: 480px) {
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.2rem; }
+  .btn-svp-primary { width: 100%; }
+  .gallery-caption { font-size: 0.85rem; }
+}
